@@ -1,6 +1,6 @@
 # IMPORTS
 import os
-from sys import argv as args
+from sys import argv as args, stderr
 import time
 
 # CONSTANTS
@@ -11,11 +11,11 @@ REPEAT_TIME = D_REPEAT_TIME
 D_EXEC_TIME = float('inf')
 EXEC_TIME = D_EXEC_TIME
 
-__version__ = '1.0.0'
+__version__ = '1.1.0'
 __reldate__ = '2 November 2021'
 
 def err(explanation: str):
-    print('error:', explanation)
+    print('error:', explanation, file=stderr)
 
 def print_version():
     print(f"You are using autofetch version {__version__} released at {__reldate__}")
